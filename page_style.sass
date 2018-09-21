@@ -1,0 +1,71 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600,400,800")
+
+$dark-grey: #333
+$dark-text-color: #161c3f
+$primary-btn-color: #3566D8
+
+body
+  background-color: #fafafa
+  margin: 0px auto
+  overflow-x: hidden
+
+.red
+  background-color: #f43552
+
+.primary-btn
+  width: 200px
+  height: 70px
+  border-radius: 3px
+  background-color: $primary-btn-color
+  color: #fff
+  font-family: sans-serif
+  border: none
+  box-shadow: 1px 2px 2px #aaa
+  font-weight: bold
+
+#section-view1
+  width: 100%
+  height: 100vh
+  background-color: inherit
+  display: grid
+  grid-template-columns: 200px 450px 1fr 400px 150px
+  grid-template-rows: 150px 1fr 100px
+  grid-gap: 5px
+
+  #view1-main-text-container
+    grid-row: 2
+    grid-column: 2
+    background-color: inherit
+    display: grid
+    grid-template-rows: 150px 110px 70px
+    padding: 0
+
+  #view1-main-icon-container
+    grid-row: 2
+    grid-column: 4
+    background-color: inherit
+
+  #view1-illustration
+    transform: scale(0.6)
+    position: relative
+    top: -110px
+    left: -100px
+
+  #view1-m-headding
+    padding: 0px
+    font-size: 30px
+    font-weight: bolder
+    font-family: 'Open Sans', sans-serif
+    color: $dark-text-color
+
+  #view1-m-desc
+    padding: 0px
+    font-size: 14px
+    font-weight: 600
+    font-family: 'Open Sans', sans-serif
+    color: #333
+    line-height: 25px
+
+  #view1-m-btn
+    padding: 15px 0
