@@ -194,13 +194,16 @@ li
 
 #section-view3
   display: grid
-  grid-template-columns: 1fr 300px
+  width: 100%
+  grid-template-columns: 1fr 1fr 1fr
   grid-template-rows: 500px
-  grid-gap: 5px
 
   #pricing-container
+    grid-column: 2
     display: grid
     grid-template-columns: 200px 700px
+    position: relative
+    left: -200px
 
     #pricing-inner-elements
       grid-column: 2
@@ -231,3 +234,49 @@ li
             justify-content: flex-start
             align-items: flex-start
             margin-left: -40px
+
+
+#section-view4
+  width: 100%
+  height: 600px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 500px
+  grid-gap: 3px
+  background-color: inherit
+
+  #mail_container
+    grid-column: 2
+    display: flex
+    flex-direction: row
+
+    #mail-illustration-container
+      width: 450px
+      height: 600px
+
+      #mailbox-draw
+        transform: scale(0.5)
+        position: relative
+        left: -250px
+
+    #signup-container
+      width: 450px
+      height: 600px
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+    #email-signup-cont
+      display: flex
+      flex-direction: row
+      margin: 5px
+
+#mail_field
+  width: 250px
+  height: 55px
+  padding: 2px 7px
+  box-shadow: 2px 3px 6px #ccc
+  border-radius: 7px
+  background-color: #fafafa
+  border: none
+  margin-right: 5px
