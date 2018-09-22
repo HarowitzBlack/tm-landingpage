@@ -1,9 +1,10 @@
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:600,400,800")
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700')
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700")
 
 *
   font-family: 'Lato', sans-serif,
+
 
 
 $dark-grey: #333
@@ -11,10 +12,28 @@ $dark-text-color: #161c3f
 $primary-btn-color: #304ee5
 $white: #ffffff
 
+$neon-green: #25fcc3
+$neon-blue: #2550fc
+$neon-pink: #fc2589
+
+
 body
   background-color: $white
   margin: 0px auto
   overflow-x: hidden
+
+a
+  text-decoration: none
+  font-weight: bold
+
+.headding
+  font-size: 28px
+  color: $dark-grey
+  font-weight: 600
+
+
+.highlights
+  color: $primary-btn-color
 
 h1
   font-family: sans-serif
@@ -31,7 +50,22 @@ p
   line-height: 25px
   color: #777
 
+li
+  text-decoration: none
+  list-style: none
+  padding: 4px 0
 
+.fg-color-neon-blue
+  color: $neon-blue
+
+.fg-color-neon-green
+  color: $neon-green
+
+.fg-color-neon-pink
+  color: $neon-pink
+
+.text-bold
+  font-weight: 700
 
 
 .red
@@ -90,7 +124,7 @@ p
   #view1-illustration
     transform: scale(0.4)
     position: relative
-    margin-top: -100px
+    margin-top: -150px
 
   #view1-m-headding
     padding: 0px
@@ -111,16 +145,15 @@ p
   height: 800px
   display: grid
   grid-template-columns: 1fr 1fr 1fr
-  grid-template-rows: 800px
+  grid-template-rows: 600px
   grid-gap: 3px
+  background-color: inherit
 
   #inner-section-view2
     min-width: 900px
     grid-column: 2
-    background-color: inherit
     display: grid
     grid-template-columns: 1fr
-    background-color: inherit
     grid-template-rows: 1fr 1fr
     grid-gap: 4px
 
@@ -148,6 +181,53 @@ p
 
     #sec-v2-bottom
       display: grid
-      grid-template-rows: 1fr
-      grid-template-columns: repeat(3,1fr)
+      grid-template-rows: 200px
+      grid-template-columns: repeat(3,300px)
       grid-gap: 5px
+      position: relative
+      top: -350px
+
+      #feature-list
+        display: flex
+        flex-direction: column
+
+
+#section-view3
+  display: grid
+  grid-template-columns: 1fr 300px
+  grid-template-rows: 500px
+  grid-gap: 5px
+
+  #pricing-container
+    display: grid
+    grid-template-columns: 200px 700px
+
+    #pricing-inner-elements
+      grid-column: 2
+      display: flex
+      flex-direction: column
+
+      h1
+        width: 500px
+
+      #pricing-desc-text
+        width: 500px
+
+      #pricing-cat-box
+        width: 500px
+        height: 200px
+        display: flex
+        flex-direction: row
+
+        .pricing-plan
+          width: 50%
+          height: 100%
+          display: flex
+          flex-direction: column
+
+          ul
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            margin-left: -40px
