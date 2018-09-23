@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
+    <aside class="fixed bottom left">
+        <button type="button" id="xLikebtn" name="button" data-uid="61b62b9dfa"> </button>
+    </aside>
     <section id="section-view1" style="display:none">
       <div id="inner-section-view1">
         <div id="view1-main-text-container">
@@ -99,9 +102,9 @@
           <h1 class="headding">Sign up to the list! I'll personally email you when this is ready for launch</h1>
           <div id="email-signup-cont">
 
-            <form name="contact" method="post" netlify>
-              <input type="email" id="mail_field" value="" placeholder="bighead@piedpiper.com">
-              <button type="submit" class="primary-btn" name="button">Subscribe</button>
+            <form name="contact" id = "signup_form" method="post" netlify>
+              <input type="email" id="mail_field" name="email" placeholder="bighead@piedpiper.com">
+              <button type="submit" class="primary-btn" id="subscribeBtn" name="button">Subscribe</button>
             </form>
 
           </div>
@@ -110,6 +113,7 @@
       </div>
     </section>
   </body>
+  <script src="https://testthembuttons.herokuapp.com/static/dist/mkbtn009.js" async defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
@@ -122,15 +126,44 @@
       })
     })
 
-    $('a[href^="#"]').click(function(){
 
-    var the_id = $(this).attr("href");
+    $('a[href^="#"]').click(function(){
+    let the_id = $(this).attr("href");
 
         $('html, body').animate({
             scrollTop:$(the_id).offset().top
         }, 'slow');
 
-    return false;});
+    return false;
+    });
+
+    let subscribeBtn = document.querySelector("#subscribeBtn");
+    let emailField = document.querySelector("#mail_field");
+    let subscribeForm = document.querySelector("#signup_form");
+
+    subscribeBtn.addEventListener("click",function(event){
+      event.preventDefault();
+      if (emailField.value === "") {
+        emailField.style.border = "1px solid red";
+        emailField.style.borderRadius = "7px";
+        emailField.placeholder = "please enter a email";
+        emailField.style.color = "red";
+
+      }else{
+        console.log("ok");
+        subscribeForm.submit();
+      }
+
+    })
+
+    emailField.addEventListener("focus",function(event){
+      emailField.style.border = "";
+      emailField.style.borderRadius = "";
+      emailField.placeholder = "bighead@piedpiper.com";
+      emailField.style.color = "#aaa";
+    })
+
+
 
   </script>
 </html>

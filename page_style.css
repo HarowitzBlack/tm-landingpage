@@ -2,8 +2,18 @@
 * {
   font-family: "Lato", sans-serif; }
 
+.fixed {
+  position: fixed;
+  z-index: 1000; }
+
+.bottom {
+  bottom: 10%; }
+
+.left {
+  left: 5%; }
+
 body {
-  background-color: #ffffff;
+  background-color: #fbfbfb;
   margin: 0px auto;
   overflow-x: hidden; }
 
@@ -62,7 +72,7 @@ li {
   height: 60px;
   border-radius: 3px;
   background-color: #304ee5;
-  color: #fff;
+  color: #fbfbfb;
   font-family: sans-serif;
   border: none;
   box-shadow: 1px 2px 2px #aaa;
@@ -77,14 +87,14 @@ li {
   grid-template-columns: 1fr 900px 1fr;
   grid-template-rows: 1fr;
   grid-gap: 3px;
-  background-color: #ffffff; }
+  background-color: #fbfbfb; }
 
 #inner-section-view1 {
   grid-column: 2;
   grid-row: 1;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fbfbfb;
   display: grid;
   grid-template-columns: 450px 1fr;
   grid-template-rows: 150px 1fr 100px;
