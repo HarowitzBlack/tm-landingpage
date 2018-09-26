@@ -33,11 +33,19 @@ body
   overflow-x: hidden
 
 section
-  padding: 100px 0
+  margin: 0px auto
+  padding: 70px 0
+  width: 90%
+  height: 100%
 
 a
   text-decoration: none
   font-weight: bold
+
+main
+  display: grid
+  grid-auto-rows: repeat(auto,1fr)
+  margin: 0px auto
 
 .headding
   font-size: 28px
@@ -101,10 +109,9 @@ li
   cursor: pointer
 
 #section-view1
-  width: 100%
   display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr
+  grid-template-columns: repeat(auto-fill,minmax(430px,1fr))
+  grid-template-rows: repeat(auto-fill,minmax(1fr,1fr))
   grid-gap: 5px
   background-color: $white
 
@@ -158,51 +165,58 @@ li
 
 
 #section-view2
-  width: 100%
-  height: 100%
   display: grid
-  grid-template-columns: 1fr 1fr 1fr 1fr
-  grid-template-rows: 500px 1fr
+  grid-template-rows: repeat(auto-fill,1fr)
   grid-gap: 3px
-  background-color: inherit
+  background-color: $white
 
-  #sec-v2-desc
-    margin-left: -200px
-    grid-column: 2 / 3
-    display: flex
-    flex-direction: column
-    padding: 20px
+  #section-view2-top
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 2px
+    background-color: inherit
 
-    hgroup
+    #sec-v2-desc
+      background-color: inherit
+      grid-column: 1
       display: flex
       flex-direction: column
-      max-width: 330px
       padding: 20px
 
+      hgroup
+        max-width: 350px
+        display: flex
+        flex-direction: column
+        padding: 20px
 
-  #sec-v2-img
-    grid-column: 3 / 5
-    height: 100%
-    background-image: url("assets/people.svg")
-    background-repeat: no-repeat
-    background-size:  70%
-    background-position: center center
+
+    #sec-v2-img
+      width: 100%
+      grid-column: 2
+      background-color: inherit
+      background-image: url("assets/people.svg")
+      background-repeat: no-repeat
+      background-size:  70%
+      background-position: center center
 
 
 #feature-items
-  display: flex
-  flex-direction: row
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  grid-template-rows: repeat(auto-fill,1fr)
+  grid-auto-rows: 1fr
+  background-color: inherit
   justify-content: center
   align-items: center
-  background-color: inherit
-  grid-row: 2 / 3
-  grid-column: 1 / 5
+  grid-column: 1 / 2
+  margin-left: 30px
 
 
   #feature-list
-    padding: 20px
-    min-width: 210px
-    max-width: 260px
+    max-width: 300px
+    min-width: 200px
+    padding: 10px
+    background-color: inherit
     display: flex
     flex-direction: column
 
@@ -210,31 +224,27 @@ li
 
 #section-view3
   display: grid
-  width: 100%
-  grid-template-columns: 1fr 1fr 1fr
-  grid-template-rows: 500px
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: repeat(auto-fill,1fr)
+  background-color: inherit
 
   #pricing-container
-    grid-column: 2
+    background-color: inherit
+    grid-column: 1
     display: grid
-    grid-template-columns: 200px 700px
+    grid-template-columns: 1fr
     position: relative
-    left: -200px
+    justify-content: center
+    align-items: center
+    padding: 5px 60px
 
     #pricing-inner-elements
       grid-column: 2
       display: flex
       flex-direction: column
 
-      h1
-        width: 500px
-
-      #pricing-desc-text
-        width: 500px
 
       #pricing-cat-box
-        width: 500px
-        height: 200px
         display: flex
         flex-direction: row
 
@@ -253,39 +263,39 @@ li
 
 
 #section-view4
-  width: 100%
-  height: 600px
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  grid-template-rows: 500px
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: repeat(auto-fill,1fr)
   grid-gap: 3px
   background-color: inherit
 
-  #mail_container
+  #mail-illustration-container
+    grid-column: 1
+    background-image: url("assets/mailbox.svg")
+    background-size: 400px
+    background-repeat: no-repeat
+    background-position: center center
+
+    #mailbox-draw
+      background-color: inherit
+      transform: scale(0.5)
+
+  #signup-container
     grid-column: 2
+    background-color: inherit
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    h1
+      max-width: 440px
+
+    p
+      max-width: 440px
+
+  #email-signup-cont
     display: flex
     flex-direction: row
-
-    #mail-illustration-container
-      width: 450px
-      height: 600px
-
-      #mailbox-draw
-        transform: scale(0.5)
-        position: relative
-        left: -250px
-
-    #signup-container
-      width: 450px
-      height: 600px
-      display: flex
-      flex-direction: column
-      justify-content: center
-
-    #email-signup-cont
-      display: flex
-      flex-direction: row
-      margin: 5px
 
 #mail_field
   width: 250px
@@ -295,4 +305,4 @@ li
   border-radius: 7px
   background-color: #fafafa
   border: none
-  margin-right: 5px
+  margin: 5px
